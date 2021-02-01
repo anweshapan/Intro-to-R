@@ -1,5 +1,5 @@
 ### Anwesha Pan
-### 07/19/2018
+### 01/19/2021
 ### Intro to R studio workshop 
 
 
@@ -7,9 +7,10 @@
 setwd("//netid.washington.edu/csde/other/desktop/anweshap/Desktop")
 
 
+## Installing R packages 
+install.packages("ggplot2")
+library(ggplot2)
 
-install.packages("uwIntroStats")
-library(uwIntroStats)
 
 
 # Using R as a calculator
@@ -136,7 +137,8 @@ summary(weight)
 summary(neckcircum)
 
 #Calculates the Square Root of weight for each observation
-sqrt(weight)
+wtsq <- sqrt(weight)
+wtsq
 
 #Calculates e raised of weight for each observation 
 exp(weight)
@@ -171,7 +173,7 @@ plot(weight, age, main="weight by age", xlab="age", ylab="weight")
 
 
 ## Simple linear regression 
-regress(fnctl = "mean", formula = weight ~ age)
+lm(weight ~ age, data=bodyfat)
 
 
 
